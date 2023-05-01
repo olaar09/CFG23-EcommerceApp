@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -6,8 +7,9 @@ function App() {
       <header className="App-header">
           E-commerce Project
       </header>
+      <Footer></Footer>
       </div>
   );
 }
 
-export default App;
+export default App
