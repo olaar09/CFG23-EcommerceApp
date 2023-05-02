@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
+import Logo from './beaute_logo_lb.svg' 
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -9,7 +10,8 @@ function Header() {
   return (
     <>
       <nav className="header">
-        <div className="nav-container">
+        <div className="nav-container"> 
+        <img src={Logo} className="App-logo" alt="logo" /> 
           <NavLink exact to="/" className="nav-logo">
             Eyes, Lips, Face
           </NavLink>
