@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import Logo from './beaute_logo_lb.svg' 
+import Logo from './beaute_logo_lb.svg';
+import { Navbar, Container, FormControl, Badge, Dropdown, Button } from "react-bootstrap";
+import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+import { BsBag } from 'react-icons/bs'
+import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -39,7 +44,7 @@ function Header() {
                 Products
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 exact
                 to="/cart"
@@ -48,8 +53,49 @@ function Header() {
                 onClick={handleClick}
               >
                 Cart
-              </NavLink>
-            </li>
+              </NavLink> */}
+
+              <Navbar>
+                <Container>
+                  <Navbar.Text className="search">
+                    <FormControl
+                    style={{width: 200}}
+                    placeholder="Search"
+                    className="m-auto"
+                    />
+                  </Navbar.Text>
+                  <Navbar>
+                    <Dropdown alignRight>
+                      <DropdownToggle variant="transparent">
+                        <BsBag color="#f7ede5" fontsize="25px" />
+                        <Badge bg="dark">{0}</Badge>
+                      </DropdownToggle>
+
+                        <DropdownMenu style={{ minWidth: 120 }}>
+                        <span style={{ padding: 10 }}>Cart is empty</span>
+                        <DropdownItem>
+                          <Button
+                            type="button" 
+                            class="btn btn-sm bg-dark m-auto"
+                            bg="dark" 
+                            variant="dark"
+                           >
+                              <NavLink
+                                exact
+                                to="/cart"
+                                activeClassName="active"
+                                className="nav-links"
+                                onClick={handleClick}
+                              >
+                            Go to cart</NavLink>
+                          </Button>
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </Dropdown>
+                  </Navbar>
+                </Container>
+              </Navbar>
+            {/* </li> */}
           </ul>
         </div>
       </nav>
