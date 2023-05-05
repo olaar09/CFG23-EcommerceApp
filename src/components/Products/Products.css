@@ -1,5 +1,44 @@
 .products {
-  background-color: #f7ede5;
+  background-color: #f8f7f6;
   padding-top: 40px;
   padding-bottom:40px;
+} 
+
+.categories {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top {
+  height: 400px;
+  background-color: #f7ede5;
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eyes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.face {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+
+.products-list {
+  margin: 5%;
 }
