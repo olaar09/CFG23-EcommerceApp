@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
+
 import './Products.css';
 
 function Products() {
