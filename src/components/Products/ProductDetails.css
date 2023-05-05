@@ -1,12 +1,50 @@
 .productcard {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  margin-bottom:20px;
+  background-color: #f7ede5;
   border-radius: 2px;
   background-color: #f7ede5;
-  width: 45%;
   height: 400px;
+  width: 80%;
+  margin-bottom: 5%;
+}
+
+.productcard img {
+  margin-left: 50%;
+  object-fit: cover;
+}
+
+.item__description {
+  background-color: #f8f7f6;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  padding-left: 6%;
+  right: 0px;
+}
+
+.item__description p {
+  font-size: larger;
+}
+
+.product__price {
+ font-weight: 900;
+ font-size:2vmax;
+ padding-top: 20px;
+}
+
+.item__description button {
+  padding: 20px;
+  width: 250px;
+  background-color: black;
+  color: #f7ede5;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
 }
