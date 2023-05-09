@@ -7,6 +7,7 @@ import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import { BsBag } from 'react-icons/bs'
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
+import SearchIcon from './search-icon.svg'
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -16,9 +17,16 @@ function Header() {
     <>
       <nav className="header">
         <div className="nav-container"> 
-        <img src={Logo} className="App-logo" alt="logo" /> 
+        <NavLink exact to="/">
+          <div><img src={Logo} className="App-logo" alt="logo"/>
+          </div>
+        </NavLink>
+        <div>
+
+        </div>
+
           <NavLink exact to="/" className="nav-logo">
-            Eyes, Lips, Face
+            
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -64,8 +72,11 @@ function Header() {
                     className="m-auto"
                     />
                   </Navbar.Text>
+
+                  <img src={SearchIcon} className="SearchIcon" alt="SearchIcon" /> 
+
                   <Navbar>
-                    <Dropdown alignRight>
+                    <Dropdown align="end">
                       <DropdownToggle variant="transparent">
                         <BsBag color="#f7ede5" fontsize="25px" />
                         <Badge bg="dark">{0}</Badge>
