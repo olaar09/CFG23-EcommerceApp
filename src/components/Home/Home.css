@@ -19,3 +19,35 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.item__description button {
+  padding: 20px;
+  width: 250px;
+  background-color: black;
+  color: #f7ede5;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+
+.top-two {
+    position: relative;
+    height: 500px;
+    background-color: #f7ede5;
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+}
+
+.three{
+  background-color: black;
+}
+
+button{
+  background-color: black;
+  color: #f7ede5;
+  font-weight: bold;
+}

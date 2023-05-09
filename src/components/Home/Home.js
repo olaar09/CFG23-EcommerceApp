@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Home.css";
+import "../Products/ProductDetails.css";
+import beauteProducts from "./beaute_products shot.jpg";
+import skintypeImage from "./skintypes_image.jpg"
+import "../Products/ProductDetails.css";
+
 
 const Home = () => {
   return (
@@ -10,30 +15,43 @@ const Home = () => {
       <Link to="/products"><button>Link to Products Page</button></Link>
     </div>
     
-    <div className='font-light'>
+
+    
+    <div className="top-two">
         <div>
-            <h1 className='main-text'>New range</h1>
-            <h2 className='sub-text'>Discover the products</h2>
-            <button>Shop now</button>
+        <h1 className="productsTitle">NEW RANGE</h1>
+        <h2>Discover the products</h2>
+        <Link to="/products">
+          <button>SHOP NOW</button>
+        </Link>
         </div>
-        <div>
-            <img src="" alt=""></img>
+       
+       
+        <img
+          src={beauteProducts}
+          className="beauteProducts"
+          alt="beauteProducts"
+        />
+    </div>
+    <div>
+
+    <div className="top-two">
+
+    <img
+          src={skintypeImage}
+          className="beauteProducts"
+          alt="beauteProducts"
+        />
+
+        <div classname="three">
+        <h1 className="productsTitle">FIND YOUR SKIN TYPE</h1>
+        <h2>Discover the products</h2>
+        <Link to="/products">
+          <button>DISCOVER</button>
+        </Link>
         </div>
     </div>
 
-    <div>
-        <div>
-            <img src="" alt=""></img>
-        </div>
-        <div>
-            <h1>Find your skin type</h1>
-            <button>Discover</button>
-        </div>
-        <div>
-            <img src="" alt=""></img>
-        </div>
-    </div>
-    <div>
 
     </div>
 
