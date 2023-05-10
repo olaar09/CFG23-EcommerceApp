@@ -13,7 +13,7 @@ function ProductDetails(props) {
         <p>{props.description}</p>
         <div className="product__price">£{props.price}</div>
         <Link to="/cart">
-          <button>Add to Cart</button>
+          <button>ADD TO CART</button>
         </Link>
       </div>
     </div>

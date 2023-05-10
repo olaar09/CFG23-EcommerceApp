@@ -9,7 +9,7 @@
   background-color: #f7ede5;
   height: 400px;
   width: 80%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 .productcard img {
@@ -33,7 +33,7 @@
 .product__price {
  font-weight: 900;
  font-size:2vmax;
- padding-top: 20px;
+ padding-top: 100px;
 }
 
 .item__description button {
@@ -47,4 +47,6 @@
   align-self: flex-end;
   position: absolute;
   bottom: 0;
+  font-weight: 600;
+  font-size: x-large;
 }

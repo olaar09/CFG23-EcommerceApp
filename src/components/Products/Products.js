@@ -25,35 +25,35 @@ function Products() {
       image: beauteGloss,
       title: "GLOSS LIPSTICK",
       description: "A creamy rich formula with high colour payoff, in a shine finish.",
-      price: 20,
+      price: 22,
     },
     {
       id: "p3",
       image: beauteEyes,
       title: "EYE SHADOW",
       description: "A shadow formulated to prolong the look of your eye makeup.",
-      price: 20,
+      price: 18,
     },
     {
       id: "p4",
       image: beauteEyeliner,
       title: "EYELINER",
       description: "A shadow formulated to prolong the look of your eye makeup.",
-      price: 20,
+      price: 18,
     },
     {
       id: "p5",
       image: beauteFoundation,
       title: "MINERAL FOUNDATION",
       description: "Light to medium beige with peachy undertone for light to medium skin.",
-      price: 20,
+      price: 32,
     },
     {
       id: "p6",
       image: beautePowder,
       title: "POWDER FOUNDATION",
       description: "Light to medium beige with peachy undertone for light to medium skin.",
-      price: 20,
+      price: 28,
     },
   ];
   return (
@@ -68,10 +68,10 @@ function Products() {
       </div>
       <div className="products">
         <div className="categories">
-          <button>Filter</button>
-          <button>Lips</button>
-          <button>Eyes</button>
-          <button>Face</button>
+          <button class="button">FILTER</button>
+          <button class="button">LIPS</button>
+          <button class="button">EYES</button>
+          <button class="button">FACE</button>
         </div>
         <div className="products-list">
           <h1>LIPS</h1>
@@ -82,6 +82,7 @@ function Products() {
               description={products[0].description}
               price={products[0].price}
             ></ProductDetails>
+            <span class="spacer"></span>
             <ProductDetails
               image={products[1].image}
               title={products[1].title}
@@ -97,6 +98,7 @@ function Products() {
               description={products[2].description}
               price={products[2].price}
             ></ProductDetails>
+            <span class="spacer"></span>
             <ProductDetails
               image={products[3].image}
               title={products[3].title}
@@ -112,6 +114,7 @@ function Products() {
               description={products[4].description}
               price={products[4].price}
             ></ProductDetails>
+            <span class="spacer"></span>
             <ProductDetails
               image={products[5].image}
               title={products[5].title}
