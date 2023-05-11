@@ -19,6 +19,7 @@
 }
 
 .nav-links{
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,4 +37,12 @@ img {
 
 ul {
   list-style-type: none;
+  font-family: 'Outfit', sans-serif;
+  font-weight: normal;
+  font-size: 2vw;
+}
+
+.SearchIcon {
+  margin: 10px;
+  width: 20px
 }

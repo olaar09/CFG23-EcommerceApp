@@ -1,8 +1,16 @@
 .products {
   background-color: #f8f7f6;
   padding-top: 40px;
-  padding-bottom:40px;
-} 
+  padding-bottom: 40px;
+}
+
+.products-list h1 {
+  border-bottom: 3px solid #0f0700;
+  width: 100%;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  padding-top: 5%;
+}
 
 .beauteProducts {
   right: 0px;
@@ -16,7 +24,7 @@
 .productsTitle {
   margin-right: 20%;
   text-align: right;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: normal;
   font-size: 4vw;
   margin-top: 11%;
@@ -25,9 +33,7 @@
 
 .categories {
   display: flex;
-  width: 200px;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .top {
@@ -43,22 +49,26 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 25px;
+  padding-bottom: 8%;
 }
 
 .eyes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 25px;
+  justify-content: space-evenly;
+  margin-bottom: 8%;
 }
 
 .face {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding-bottom: 25px;
   margin-bottom: 10%;
+}
+
+.spacer {
+  width: 50px;
 }
 
 .products-list {
@@ -66,4 +76,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.categories .button {
+  margin: 0 20px;
+  margin-top: 30px;
+  padding: 20px;
+  width: 250px;
+  background-color: rgb(251, 251, 251);
+  color: black;
+  font-family: "Outfit", sans-serif;
+  border: 2px solid black;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: x-large;
+  font-weight: 600;
 }
