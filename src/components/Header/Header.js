@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import Logo from './beaute_logo_lb.svg';
-import { Navbar, Container, FormControl, Badge, Dropdown, Button } from "react-bootstrap";
+import Logo from "./beaute_logo_lb.svg";
+import {
+  Navbar,
+  Container,
+  FormControl,
+  Badge,
+  Dropdown,
+  Button,
+} from "react-bootstrap";
 import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
-import { BsBag } from 'react-icons/bs'
+import { BsBag } from "react-icons/bs";
 import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
-import SearchIcon from './search-icon.svg'
+import SearchIcon from "./search-icon.svg";
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -16,18 +23,15 @@ function Header() {
   return (
     <>
       <nav className="header">
-        <div className="nav-container"> 
-        <NavLink exact to="/">
-          <div><img src={Logo} className="App-logo" alt="logo"/>
-          </div>
-        </NavLink>
-        <div>
-
-        </div>
-
-          <NavLink exact to="/" className="nav-logo">
-            
+        <div className="nav-container">
+          <NavLink exact to="/">
+            <div>
+              <img src={Logo} className="App-logo" alt="logo" />
+            </div>
           </NavLink>
+          <div></div>
+
+          <NavLink exact to="/" className="nav-logo"></NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
@@ -63,59 +67,59 @@ function Header() {
                 Cart
               </NavLink> */}
 
-              <Navbar>
-                <Container>
-                  <Navbar.Text className="search">
-                    <FormControl
-                    style={{width: 200}}
+            <Navbar>
+              <Container>
+                <Navbar.Text className="search">
+                  <FormControl
+                    style={{ width: 200 }}
                     placeholder="Search"
                     className="m-auto"
-                    />
-                  </Navbar.Text>
+                  />
+                </Navbar.Text>
 
-                  <img src={SearchIcon} className="SearchIcon" alt="SearchIcon" /> 
+                <img src={SearchIcon} className="SearchIcon" alt="SearchIcon" />
 
-                  <Navbar>
-                    <Dropdown align="end">
-                      <DropdownToggle variant="transparent">
-                        <BsBag color="#f7ede5" fontsize="25px" />
-                        <Badge bg="dark">{0}</Badge>
-                      </DropdownToggle>
+                <Navbar>
+                  <Dropdown align="end">
+                    <DropdownToggle variant="transparent">
+                      <BsBag color="#f7ede5" fontsize="25px" />
+                      <Badge bg="dark">{0}</Badge>
+                    </DropdownToggle>
 
-                        <DropdownMenu style={{ minWidth: 120 }}>
-                        <span style={{ padding: 10 }}>Cart is empty</span>
-                        <DropdownItem>
-                          <Button
-                            type="button" 
-                            class="btn btn-sm bg-dark m-auto"
-                            bg="dark" 
-                            variant="dark"
-                           >
-                              <NavLink
-                                exact
-                                to="/cart"
-                                activeClassName="active"
-                                className="nav-links"
-                                onClick={handleClick}
-                              >
-                            Go to cart</NavLink>
-                          </Button>
-                        </DropdownItem>
-                      </DropdownMenu>
-                    </Dropdown>
-                  </Navbar>
-                </Container>
-              </Navbar>
+                    <DropdownMenu style={{ minWidth: 120 }}>
+                      <span style={{ padding: 10 }}>Cart is empty</span>
+                      <DropdownItem>
+                        <Button
+                          type="button"
+                          class="btn btn-sm bg-dark m-auto"
+                          bg="dark"
+                          variant="dark"
+                        >
+                          <NavLink
+                            exact
+                            to="/cart"
+                            activeClassName="active"
+                            className="nav-links"
+                            onClick={handleClick}
+                          >
+                            Go to cart
+                          </NavLink>
+                        </Button>
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </Navbar>
+              </Container>
+            </Navbar>
             {/* </li> */}
           </ul>
         </div>
       </nav>
     </>
   );
-} 
+}
 
 export default Header;
-
 
 /*import React from 'react';
 import React, { useContext } from 'react';
@@ -141,4 +145,3 @@ function Header({ setPage }) {
 };
 
 export default Header;*/
-
