@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProductDetails from "./ProductDetails";
 import beauteProducts from "./beaute_products shot.jpg";
 import beauteEyes from "./eyes1.jpg";
@@ -17,42 +16,48 @@ function Products() {
       id: "p1",
       image: beauteLipstick,
       title: "MATTE LIPSTICK",
-      description: "A creamy rich formula with high colour payoff, in a no-shine matte finish.",
+      description:
+        "A creamy rich formula with high colour payoff, in a no-shine matte finish.",
       price: 20,
     },
     {
       id: "p2",
       image: beauteGloss,
       title: "GLOSS LIPSTICK",
-      description: "A creamy rich formula with high colour payoff, in a shine finish.",
+      description:
+        "A creamy rich formula with high colour payoff, in a shine finish.",
       price: 22,
     },
     {
       id: "p3",
       image: beauteEyes,
       title: "EYE SHADOW",
-      description: "A shadow formulated to prolong the look of your eye makeup.",
+      description:
+        "A shadow formulated to prolong the look of your eye makeup.",
       price: 18,
     },
     {
       id: "p4",
       image: beauteEyeliner,
       title: "EYELINER",
-      description: "A shadow formulated to prolong the look of your eye makeup.",
+      description:
+        "A shadow formulated to prolong the look of your eye makeup.",
       price: 18,
     },
     {
       id: "p5",
       image: beauteFoundation,
       title: "MINERAL FOUNDATION",
-      description: "Light to medium beige with peachy undertone for light to medium skin.",
+      description:
+        "Light to medium beige with peachy undertone for light to medium skin.",
       price: 32,
     },
     {
       id: "p6",
       image: beautePowder,
       title: "POWDER FOUNDATION",
-      description: "Light to medium beige with peachy undertone for light to medium skin.",
+      description:
+        "Light to medium beige with peachy undertone for light to medium skin.",
       price: 28,
     },
   ];
@@ -129,54 +134,3 @@ function Products() {
 }
 
 export default Products;
-
-/*  import React, { useContext, useState } from 'react'
-import { ShopContext } from '../context/shopContext'
-import "./product.css"
-
-
-export default function product(props) {
-  let cartData = props.data
-  const { cartItems, addToCart, newItems, setNewItems, cartCounter, setCartCounter, updateCount} = useContext(ShopContext)
-
-  function updateCart(id) {
-    setNewItems(
-      newItems.map((item) => {
-        if(item.id === id) {
-          let val = {...item, quantity: item.quantity + 1};
-          if(val.quantity <= 1){
-            setCartCounter(cartCounter + 1)}
-          return val
-        }
-        else
-          return item
-      })
-      )
- } 
-
-  return (
-    <div className='product'>
-      <div className="image-container">
-        <img src={props.data.ProductImage} alt="clothing" />
-      </div>
-
-      <div className="description">
-        <div className="name">
-          <p>{props.data.ProductName}</p>
-        </div>
-
-        <div className="add">
-          <span>${props.data.ProductPrice}</span>
-          <button onClick={() => {
-            props.setCartProducts(props.cartProducts.concat({cartData})); 
-            addToCart(props.data.id);
-            updateCart(props.data.id)
-            }}>
-              Add to cart
-              { !!newItems[props.data.id - 1].quantity && ` (${newItems[props.data.id - 1].quantity})`}
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-} */
