@@ -3,6 +3,15 @@ import "./ProductDetails.css";
 import { Link } from "react-router-dom";
 
 function ProductDetails(props) {
+  const handleAddToCart = () => {
+    props.addToCart({
+      image: props.image,
+      title: props.title,
+      description: props.description,
+      price: props.price
+    });
+  };
+  
   return (
     <div className="productcard">
       <div> <img
@@ -13,7 +22,7 @@ function ProductDetails(props) {
         <p>{props.description}</p>
         <div className="product__price">£{props.price}</div>
         <Link to="/cart">
-          <button>ADD TO CART</button>
+          <button onClick={handleAddToCart}>ADD TO CART</button>
         </Link>
       </div>
     </div>
