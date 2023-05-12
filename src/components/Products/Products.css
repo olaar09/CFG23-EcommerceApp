@@ -92,3 +92,47 @@
   font-size: x-large;
   font-weight: 600;
 }
+
+.searchBarSection {
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+}
+
+
+.searchBar {
+  display: flex;
+  align-items: top;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.input {
+  width: 250px;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  font-family: "Outfit", sans-serif;
+  text-align: left;
+  text-indent: 5%;
+  
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  border-radius: 20px;
+}
+
+.display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+

@@ -7,6 +7,7 @@ import beauteFoundation from "./foundation1.jpg";
 import beautePowder from "./foundation2.jpg";
 import beauteLipstick from "./lipstick1.jpg";
 import beauteGloss from "./lipstick2.jpg";
+import SearchBarSection from "./searchbar";
 
 import "./Products.css";
 
@@ -72,14 +73,22 @@ function Products() {
         />
       </div>
       <div className="products">
-        <div className="categories">
-          <button class="button">FILTER</button>
-          <button class="button">LIPS</button>
-          <button class="button">EYES</button>
-          <button class="button">FACE</button>
+      <div>
+      <SearchBarSection />
+    </div>
+      <div className="categories">
+        <div onClick={() => window.location.replace("/products#lips")}>
+<button class="button">LIPS</button>
+</div>
+<div onClick={() => window.location.replace("/products#eyes")}>
+<button class="button">EYES</button>
+</div>
+<div onClick={() => window.location.replace("/products#face")}>
+<button class="button">FACE</button>
+</div>
         </div>
         <div className="products-list">
-          <h1>LIPS</h1>
+        <h1 id="lips">LIPS</h1>
           <div className="lips">
             <ProductDetails
               image={products[0].image}
@@ -95,7 +104,7 @@ function Products() {
               price={products[1].price}
             ></ProductDetails>
           </div>
-          <h1>EYES</h1>
+          <h1 id="eyes">EYES</h1>
           <div className="eyes">
             <ProductDetails
               image={products[2].image}
@@ -111,7 +120,7 @@ function Products() {
               price={products[3].price}
             ></ProductDetails>
           </div>
-          <h1>FACE</h1>
+          <h1 id="face">FACE</h1>
           <div className="face">
             <ProductDetails
               image={products[4].image}
