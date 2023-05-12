@@ -19,10 +19,10 @@ const Home = () => {
     
     <div className="top-two">
         <div>
-        <h1 className="productsTitle">NEW RANGE</h1>
-        <h2>Discover the products</h2>
+        <h1 className="main-text">NEW RANGE</h1>
+        <h2 className='sub-text'>Discover the products</h2>
         <Link to="/products">
-          <button>SHOP NOW</button>
+          <button className='button-top'>SHOP NOW</button>
         </Link>
         </div>
        
@@ -39,18 +39,19 @@ const Home = () => {
 
     <img
           src={skintypeImage}
-          className="beauteProducts"
+          className="skinProducts"
           alt="beauteProducts"
         />
 
-        <div classname="three">
-        <h1 className="productsTitle">FIND YOUR SKIN TYPE</h1>
-        <h2>Discover the products</h2>
+<div classname="three">
+        <h1 className="main-text">FIND YOUR <br/> SKIN TYPE</h1>
         <Link to="/products">
           <button>DISCOVER</button>
         </Link>
         </div>
     </div>
+
+    
 
 
     </div>

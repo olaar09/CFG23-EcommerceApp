@@ -12,42 +12,76 @@
   font-family: 'Outfit', sans-serif;
   font-weight: 200;
   text-transform: uppercase;
+  justify-content: space-around;
+  padding-top: 7rem;
+  margin-left: 15rem;
 }
 
 .sub-text{
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  margin-left: 12rem;
 }
 
-.item__description button {
+button {
   padding: 20px;
   width: 250px;
+  margin-left: 8rem;
   background-color: black;
   color: #f7ede5;
   font-family: 'Outfit', sans-serif;
   border-radius: 5px;
   cursor: pointer;
-  align-self: flex-end;
-  position: absolute;
-  bottom: 0;
+  justify-content: center;
+ 
+}
+
+#button-top{
+  padding: 20px;
+  width: 250px;
+  margin-left: 5rem;
+  background-color: black;
+  color: #f7ede5;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: end;
+ 
 }
 
 .top-two {
-    position: relative;
+    position: ;
     height: 500px;
     background-color: #f7ede5;
     display: flex;
     align-items: row;
-    justify-content: space-between;
+
 }
 
 .three{
   background-color: black;
+  justify-content: space-between;
 }
 
 button{
   background-color: black;
+  margin-left: 2rem;
   color: #f7ede5;
   font-weight: bold;
 }
+
+.beauteProducts{
+margin-left: 6rem;
+}
+
+.skinProducts{
+    right: 0px;
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    background-color: #f7ede5;
+  margin-right: 6rem;
+  }
+  
