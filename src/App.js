@@ -6,10 +6,12 @@ import Cart from './components/Cart/Cart';
 import Products from './components/Products/Products';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import { CartProvider } from './components/Products/CartContext';
 
 function App() {
   return (
     <>
+    <CartProvider>
       <Router>
         <Header />
         <div className="pages">
@@ -21,6 +23,7 @@ function App() {
         </div>
       <Footer />
       </Router>
+    </CartProvider>
   </>
   );
 }

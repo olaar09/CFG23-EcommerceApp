@@ -51,6 +51,7 @@
   margin-right: 50px;
   max-height: fit-content;
   text-align: left;
+  justify-content: space-between;
 }
 
 .orderSummary {
@@ -78,4 +79,12 @@ h3 {
   border-radius: 5px;
   cursor: pointer;
   align-self: flex-end;
+}
+
+.payButton:active {
+  transform: translateY(2px)
+}
+
+.payButton:hover {
+  background-color: #2b2520;
 }

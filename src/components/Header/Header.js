@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import Logo from "./beaute_logo_lb.svg";
@@ -10,16 +10,27 @@ import {
   Dropdown,
   Button,
 } from "react-bootstrap";
-import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
+// import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
 import { BsBag } from "react-icons/bs";
-import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
+// import DropdownMenu from "react-bootstrap/esm/DropdownMenu";
+// import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import SearchIcon from "./search-icon.svg";
+import { Modal } from "react-bootstrap";
+import { CartContext } from "../Products/CartContext";
+import CartProduct from "../Cart/CartProduct";
 
 function Header() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
+
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
+  const cart = useContext(CartContext)
+  const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
+
   return (
     <>
       <nav className="header">
@@ -80,7 +91,52 @@ function Header() {
                 <img src={SearchIcon} className="SearchIcon" alt="SearchIcon" />
 
                 <Navbar>
-                  <Dropdown align="end">
+                <Navbar.Collapse>
+                      <Button 
+                        onClick={handleShow}                             
+                        type="button" 
+                        class="btn btn-sm m-auto"
+                        variant="transparent">
+                        <BsBag color="#f7ede5"/> 
+                        <Badge bg="dark">{productsCount}</Badge>
+                        </Button>
+                    </Navbar.Collapse>
+                    <Modal show={show} onHide={handleClose}>
+                      <Modal.Header closeButton>
+                        <Modal.Title>CART</Modal.Title>
+                      </Modal.Header>
+                      <Modal.Body>
+                        {productsCount > 0 ? 
+                            <>
+                              <p>Items in your cart:</p>
+                             {cart.items.map((currentProduct, idx) => (
+                                // <h1>{currentProduct.id}</h1>
+                                <CartProduct 
+                                  key={idx} 
+                                  id={currentProduct.id}
+                                  quantity={currentProduct.quantity}></CartProduct>
+                              ))}
+
+                               <h1>Total: {cart.getTotalCost()}</h1>
+
+                              <Button variant="dark"
+                               class="btn btn-sm bg-dark m-auto"
+                               bg="dark">
+                                <NavLink
+                                exact
+                                to="/cart"
+                                activeClassName="active"
+                                className="nav-links"
+                                onClick={handleClick}
+                                >PAY NOW</NavLink></Button>
+                            </>
+                          :
+                              <h1>YOUR CART IS EMPTY</h1>
+                        }
+                      </Modal.Body>
+                    </Modal>
+
+                  {/* <Dropdown align="end">
                     <DropdownToggle variant="transparent">
                       <BsBag color="#f7ede5" fontsize="25px" />
                       <Badge bg="dark">{0}</Badge>
@@ -107,7 +163,7 @@ function Header() {
                         </Button>
                       </DropdownItem>
                     </DropdownMenu>
-                  </Dropdown>
+                  </Dropdown> */}
                 </Navbar>
               </Container>
             </Navbar>
