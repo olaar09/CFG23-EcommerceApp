@@ -116,17 +116,15 @@ button {
 .HomeTextContainer button {
   margin-top: 10px;
   padding: 20px;
-  width: 350px;
+  width: 320px;
   background-color: black;
   color: #f7ede5;
   font-family: 'Outfit', sans-serif;
   border: none;
   cursor: pointer;
-  align: center;
+  align-items: center;
   font-weight: 600;
   font-size: x-large;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   transition-duration: 0.4s;
 
 }
@@ -174,15 +172,69 @@ button {
 }
 
 
+.home-newrange {
+  position: relative;
+  height: 700px;
+  background-color: #f7ede5;
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+}
 
-.top-two {
-    position: ;
+.NewRangeTextContainer{
+  display: grid;
+  columns: auto;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  grid-template-rows: 240px 120px 1fr;
+  margin-top: 120px;
+  margin-right: 50px;
+  margin-left: 50px;
+  text-align: center;
+}
+
+
+.NewRangeTextContainer button {
+  margin-top: 10px;
+  padding: 20px;
+  width: 320px;
+  background-color: black;
+  color: #f7ede5;
+  font-family: 'Outfit', sans-serif;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 600;
+  font-size: x-large;
+  transition-duration: 0.4s;
+}
+
+.NewRangeTextContainer button:hover {
+
+  background-color: #f7ede5;
+  color: black;
+  outline: #000000 solid 2px;
+}
+
+
+.beauteProducts{
+  right: 0px;
+  width: 50%;
+  height: inherit;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: #f7ede5;
+}
+
+
+/* .top-two {
+    position: relative;
     height: 500px;
     background-color: #f7ede5;
     display: flex;
     align-items: row;
 
-}
+} */
 
 .three{
   background-color: black;

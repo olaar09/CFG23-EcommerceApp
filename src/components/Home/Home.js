@@ -33,6 +33,7 @@ const Home = () => {
         </Link>
         </div>
     </div>
+  
 
 
 
@@ -66,10 +67,34 @@ const Home = () => {
      </div>
 </div>
 
+
+
+   
+  
+    <div className="home-newrange">
+
+        <div class="NewRangeTextContainer">
+        <div class="HomeTitle">NEW<br/>RANGE</div>
+        <div class="HomeSubTitle">DISCOVER THE PRODUCTS</div>
+
+        <Link to="/products">
+          <button>SHOP NOW</button>
+        </Link>
+        </div>
+        <img
+          src={beauteProducts}
+          className="beauteProducts"
+          alt="Products"
+        />
+       
+       </div>
+
+
+
     
 
     
-    <div className="top-two">
+    {/* <div className="top-two">
         <div>
         <h1 className="main-text">NEW RANGE</h1>
         <h2 className='sub-text'>Discover the products</h2>
@@ -106,8 +131,9 @@ const Home = () => {
     
 
 
-    </div>
+    </div> */}
 
+    
     </div>
   );
 }
