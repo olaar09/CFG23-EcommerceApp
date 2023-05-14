@@ -81,6 +81,7 @@ const Home = () => {
           <button>SHOP NOW</button>
         </Link>
         </div>
+        
         <img
           src={beauteProducts}
           className="beauteProducts"
@@ -92,9 +93,9 @@ const Home = () => {
 
 
     
-
+{/* 
     
-    {/* <div className="top-two">
+       { <div className="top-two">
         <div>
         <h1 className="main-text">NEW RANGE</h1>
         <h2 className='sub-text'>Discover the products</h2>
@@ -131,7 +132,7 @@ const Home = () => {
     
 
 
-    </div> */}
+    </div> } */}
 
     
     </div>

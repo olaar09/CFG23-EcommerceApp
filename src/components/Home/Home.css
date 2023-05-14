@@ -188,8 +188,8 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 240px 120px 1fr;
   margin-top: 120px;
-  margin-right: 50px;
-  margin-left: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -220,7 +220,7 @@ button {
 .beauteProducts{
   right: 0px;
   width: 50%;
-  height: inherit;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
   background-color: #f7ede5;
@@ -236,23 +236,23 @@ button {
 
 } */
 
-.three{
+/* .three{
   background-color: black;
   justify-content: space-between;
-}
+} */
 
-button{
+/* button{
   background-color: black;
   margin-left: 2rem;
   color: #f7ede5;
   font-weight: bold;
-}
+} */
 
-.beauteProducts{
+/* .beauteProducts{
 margin-left: 6rem;
-}
+} */
 
-.skinProducts{
+/* .skinProducts{
     right: 0px;
     width: 50%;
     height: 500px;
@@ -260,5 +260,5 @@ margin-left: 6rem;
     object-position: 50% 50%;
     background-color: #f7ede5;
   margin-right: 6rem;
-  }
+  } */
   
