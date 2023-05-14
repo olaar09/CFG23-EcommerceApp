@@ -8,6 +8,7 @@
   background-color: black;
   color: #f7ede5;
   font-size: 10px;
+  
 }
 
 .nav-container ul{
@@ -24,8 +25,14 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px;
-  color: #f7ede5
+  color: #f7ede5;
 }
+
+.nav-links:hover{
+  color: #f7ede5;
+  text-decoration: underline;
+}
+
 
 .nav-logo {
   color:  #f7ede5;
