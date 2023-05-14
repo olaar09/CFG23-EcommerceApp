@@ -1,4 +1,92 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import "./ProductDetails.css";
+import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
+import { Button, Col, Form, Row } from "react-bootstrap";
+
+function ProductDetails(props) {
+  const cart = useContext(CartContext);
+  const { id, image, title, description, price } = props;
+
+  const [productQuantity, setProductQuantity] = useState(0);
+
+  const handleAddToCart = () => {
+    cart.addToCart(id);
+    setProductQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleRemoveFromCart = () => {
+    if (productQuantity > 0) {
+      cart.removeFromCart(id);
+      setProductQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const handleDeleteFromCart = () => {
+    cart.deleteFromCart(id);
+    setProductQuantity(0);
+  };
+
+  return (
+    <div className="productcard">
+      <div>
+        <img src={image} alt={title} />
+      </div>
+      <div className="item__description">
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <div className="product__price">£{price}</div>
+
+        {productQuantity > 0 ? (
+          <>
+            <Form as={Row}>
+              <Form.Label column="true" sm="5">
+                In Cart: {productQuantity}
+              </Form.Label>
+              <Col sm="2">
+                <Button
+                  sm="2"
+                  className="btn-sm mt-2"
+                  onClick={handleAddToCart}
+                >
+                  +
+                </Button>
+                <Button
+                  sm="2"
+                  className="btn-sm mt-2"
+                  onClick={handleRemoveFromCart}
+                >
+                  -
+                </Button>
+              </Col>
+            </Form>
+            <Button
+              variant="danger"
+              onClick={handleDeleteFromCart}
+              className="mt-5"
+            >
+              REMOVE
+            </Button>
+          </>
+        ) : (
+          <Button
+            type="button"
+            class="btn btn-sm m-auto"
+            variant="secondary"
+            onClick={handleAddToCart}
+          >
+            ADD TO CART
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default ProductDetails;
+
+
+/*import React, { useContext } from "react";
 import "./ProductDetails.css";
 // import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
@@ -19,7 +107,7 @@ function ProductDetails(props) {
         <h2>{props.title} </h2>
         <p>{props.description}</p>
         <div className="product__price">£{props.price}</div>
-        {/* <Link to="/cart"> */}
+        {/* <Link to="/cart"> *//*}
         { productQuantity > 0 ? 
             <>
               <Form as={Row}>
@@ -49,10 +137,10 @@ function ProductDetails(props) {
               variant="secondary"
               onClick={() => cart.addToCart(props.id)}>ADD TO CART</Button>
           }
-        {/* </Link> */}
+        {/* </Link> *//*}
       </div>
     </div>
   );
 }
 
-export default ProductDetails;
+export default ProductDetails; */
