@@ -13,11 +13,13 @@ function CartProduct(props) {
   return (
     <>
         <h3>{productData.title}</h3>
+        <img src={productData.image} alt=''/>
         <p>{quantity} total</p>
         <p>£{(quantity * productData.price).toFixed(2)}</p>
         <Button 
             size="sm" 
             variant="dark"
+            bg="#f7ede5"
             onClick={() => cart.deleteFromCart(id)}>REMOVE</Button>
         <hr></hr>
     </>

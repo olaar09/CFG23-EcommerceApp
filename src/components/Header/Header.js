@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import Logo from "./beaute_logo_lb.svg";
 import {
@@ -7,7 +7,7 @@ import {
   Container,
   FormControl,
   Badge,
-  Dropdown,
+  // Dropdown,
   Button,
 } from "react-bootstrap";
 // import DropdownToggle from "react-bootstrap/esm/DropdownToggle";
@@ -95,10 +95,19 @@ function Header() {
                       <Button 
                         onClick={handleShow}                             
                         type="button" 
-                        class="btn btn-sm m-auto"
+                        class="btn btn-sm me-1"
                         variant="transparent">
-                        <BsBag color="#f7ede5"/> 
+                          <Link to="/cart">
+                          {/* <NavLink
+                            exact
+                            to="/cart"
+                            activeClassName="active"
+                            className="nav-links"
+                            onClick={handleClick}> */}
+                        <BsBag color="#f7ede5"/>
                         <Badge bg="dark">{productsCount}</Badge>
+                        {/* </NavLink> */}
+                        </Link>
                         </Button>
                     </Navbar.Collapse>
                     <Modal show={show} onHide={handleClose}>

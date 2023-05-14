@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./ProductDetails.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
@@ -13,7 +13,7 @@ function ProductDetails(props) {
     <div className="productcard">
       <div>
         {" "}
-        <img src={props.image} />
+        <img src={props.image} alt=" "/>
       </div>
       <div className="item__description">
         <h2>{props.title} </h2>
@@ -23,20 +23,22 @@ function ProductDetails(props) {
         { productQuantity > 0 ? 
             <>
               <Form as={Row}>
-                <Form.Label column="true" sm="5">In Cart: {productQuantity}</Form.Label>
+                <Form.Label column="true" sm="5">Quantity: {productQuantity}</Form.Label>
                 <Col sm="2">
                   <Button 
+                    variant="dark"
                     sm="2" 
                     className="btn-sm mt-2" 
                     onClick={() => cart.addToCart(props.id)}>+</Button>
                   <Button 
+                    variant="dark"
                     sm="2" 
                     className="btn-sm mt-2" 
                     onClick={() => cart.removeFromCart(props.id)}>-</Button>
                 </Col>
               </Form>
               <Button 
-                variant="danger" 
+                variant="dark" 
                 onClick={() => cart.deleteFromCart(props.id)} 
                 className="mt-5">REMOVE</Button>
             </> 
