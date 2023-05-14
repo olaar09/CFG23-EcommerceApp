@@ -5,15 +5,67 @@ import "../Products/ProductDetails.css";
 import beauteProducts from "./beaute_products shot.jpg";
 import skintypeImage from "./skintypes_image.jpg"
 import "../Products/ProductDetails.css";
+import modelhomepage from "./Model_for_homepage.jpg";
+import beauteShadowHome from "./beaute_eyes_02.jpg";
+import beauteFoundationHome from "./beaute_foundation_01.jpg";
+import beauteLipstickHome from "./beaute_lipstick_01.jpg";
 
 
 const Home = () => {
   return (
     <div className="home">
-    <div>
-      <h1>Home Page</h1>
-      <Link to="/products"><button>Link to Products Page</button></Link>
+   
+  
+    <div className="home-toptwo">
+
+    <img
+          src={modelhomepage}
+          className="modelhome"
+          alt="Model"
+        />
+
+        <div class="HomeTextContainer">
+        <div class="HomeTitle">NATURAL MAKEUP</div>
+        <div class="HomeSubTitle">IN ALL SHADES</div>
+
+        <Link to="/products">
+          <button>SHOP NOW</button>
+        </Link>
+        </div>
     </div>
+
+
+
+
+<div class="home-second-container">
+<div class="home-second-grid">
+<Link to="/products"><img
+      src={beauteLipstickHome}
+      className="LipsImgHome"
+      alt="lips"
+      />
+    <div class="LipsTitle">LIPS</div>
+    </Link>
+
+<Link to="/products"><img
+      src={beauteShadowHome}
+      className="EyesHomeSec"
+      alt="eyes"
+    />
+     <div class="EyesTitle">EYES</div>
+    </Link>
+
+
+<Link to="/products"><img
+      src={beauteFoundationHome}
+      className="FaceHomeSec"
+      alt="face"
+     />
+     <div class="FaceTitle">FACE</div></Link>
+
+     </div>
+</div>
+
     
 
     
