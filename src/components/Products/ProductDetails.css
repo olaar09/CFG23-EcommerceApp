@@ -1,7 +1,8 @@
 .productcard {
   position: relative;
   display: flex;
-  flex: 2;
+  flex-basis: 50%;
+  flex-grow: 1;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
@@ -36,7 +37,7 @@
 .product__price {
  font-weight: 900;
  font-size:2vmax;
- padding-top: 100px;
+ padding-top: 80px;
 }
 
 .item__description button {
