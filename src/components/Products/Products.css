@@ -78,19 +78,30 @@
   justify-content: space-between;
 }
 
-.categories .button {
+.categories button {
+  display: flex; /* Make the button a flex container */
+  justify-content: center; /* Center the content along the main axis */
+  align-items: center; /* Center the content along the cross axis */
+  text-align: center;
   margin: 0 20px;
   margin-top: 30px;
-  padding: 20px;
+  height: 50px;
   width: 250px;
-  background-color: rgb(251, 251, 251);
+  background-color: #FFFFFF;
   color: black;
   font-family: "Outfit", sans-serif;
   border: 2px solid black;
-  border-radius: 2px;
+  border-radius: 0px;
   cursor: pointer;
   font-size: x-large;
   font-weight: 600;
+  transition-duration: 0.4s;
+}
+
+.categories button:hover {
+  background-color: black;
+  /* border: 2px solid #FFFFFF; */
+  color: #f7ede5;
 }
 
 .searchBarSection {
@@ -107,14 +118,13 @@
   align-items: top;
   background-color: white;
   border: 1px solid;
-  border-radius: 20px;
+  border-radius: 0px;
   margin: 15px;
 }
 
 .input {
   width: 250px;
   border: none;
-  border-radius: 20px;
   padding: 5px;
   font-family: "Outfit", sans-serif;
   text-align: left;
@@ -126,7 +136,7 @@
   background-color: transparent;
   border: none;
   width: 50px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 

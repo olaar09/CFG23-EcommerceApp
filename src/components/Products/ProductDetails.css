@@ -28,7 +28,10 @@
   
 }
  
-
+.item__description h2 {
+  font-weight: 600;
+  margin-left: 0px;
+}
 
 .item__description p {
   font-size: larger;
@@ -41,16 +44,25 @@
 }
 
 .item__description button {
+  margin-top: 40px;
   padding: 20px;
-  width: 250px;
+  width: 260px;
   background-color: black;
   color: #f7ede5;
+  border-radius: 0px;
   font-family: 'Outfit', sans-serif;
-  border-radius: 5px;
+  border: none;
   cursor: pointer;
-  align-self: flex-end;
-  position: absolute;
-  bottom: 0;
+  align-items: center;
   font-weight: 600;
   font-size: x-large;
+  transition-duration: 0.4s;
+}
+
+.item__description button:hover,
+.item__description button:active,
+select {
+  background-color: #FFFFFF;
+  color: black;
+  outline: #000000 solid 2px;
 }

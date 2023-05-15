@@ -36,7 +36,7 @@ function ProductDetails(props) {
         <h2>{title}</h2>
         <p>{description}</p>
         <div className="product__price">£{price}</div>
-
+        <div>
         {productQuantity > 0 ? (
           <>
             <Form as={Row}>
@@ -51,6 +51,7 @@ function ProductDetails(props) {
                 >
                   +
                 </Button>
+                
                 <Button
                   sm="2"
                   className="btn-sm mt-2"
@@ -67,6 +68,8 @@ function ProductDetails(props) {
             >
               REMOVE
             </Button>
+
+
           </>
         ) : (
           <Button
@@ -78,6 +81,7 @@ function ProductDetails(props) {
             ADD TO CART
           </Button>
         )}
+        </div>
       </div>
     </div>
   );

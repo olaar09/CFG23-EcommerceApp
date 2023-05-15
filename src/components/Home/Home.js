@@ -16,7 +16,7 @@ const Home = () => {
     <div className="home">
    
   
-    <div className="home-toptwo">
+    <div className="home-naturalmakeup-section">
 
     <img
           src={modelhomepage}
@@ -84,7 +84,7 @@ const Home = () => {
         
         <img
           src={beauteProducts}
-          className="beauteProducts"
+          className="beauteProductsimg"
           alt="Products"
         />
        
@@ -93,46 +93,33 @@ const Home = () => {
 
 
     
-{/* 
-    
-       { <div className="top-two">
-        <div>
-        <h1 className="main-text">NEW RANGE</h1>
-        <h2 className='sub-text'>Discover the products</h2>
-        <Link to="/products">
-          <button className='button-top'>SHOP NOW</button>
-        </Link>
-        </div>
-       
-       
-        <img
-          src={beauteProducts}
-          className="beauteProducts"
-          alt="beauteProducts"
-        />
-    </div>
+{
+
+
+
     <div>
 
-    <div className="top-two">
+<div className="skintype-section">
 
-    <img
+<img
           src={skintypeImage}
-          className="skinProducts"
-          alt="beauteProducts"
+          className="skinProducts-img"
+          alt="Skin Type"
         />
 
-<div classname="three">
-        <h1 className="main-text">FIND YOUR <br/> SKIN TYPE</h1>
-        <Link to="/products">
-          <button>DISCOVER</button>
-        </Link>
-        </div>
+    <div class="SkinType-TextContainer">
+    <div class="skintype-Title">FIND YOUR <br/> SKIN TYPE</div>
+    <Link to="/products">
+      <button>DISCOVER</button>
+    </Link>
     </div>
+</div>
+
 
     
 
 
-    </div> } */}
+    </div> }
 
     
     </div>

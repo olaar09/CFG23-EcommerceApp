@@ -40,7 +40,7 @@ function Products() {
     {
       id: "p4",
       image: beauteEyeliner,
-      title: "EYELINER",
+      title: "EYE SHADOW",
       description:
         "A shadow formulated to prolong the look of your eye makeup.",
       price: 18,
@@ -56,7 +56,7 @@ function Products() {
     {
       id: "p6",
       image: beautePowder,
-      title: "POWDER FOUNDATION",
+      title: "LIQUID FOUNDATION",
       description:
         "Light to medium beige with peachy undertone for light to medium skin.",
       price: 28,
