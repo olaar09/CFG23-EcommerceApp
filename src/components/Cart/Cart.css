@@ -40,8 +40,7 @@
   padding-left: 30px;
   border-radius: 2px;
   font-family: 'Outfit', sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -52,6 +51,7 @@
   max-height: fit-content;
   text-align: left;
   justify-content: space-between;
+  margin-bottom: 220px;
 }
 
 .orderSummary {
@@ -103,4 +103,17 @@ h3 {
 
 .itemsLeft {
   float: left;
+  background-color: #f7ede5;
+  font-family: 'Outfit', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 30px; 
+  margin-top: 150px;
+  margin-bottom: 220px;
+  margin-left: 50px;
+  width: 40%;
 }
