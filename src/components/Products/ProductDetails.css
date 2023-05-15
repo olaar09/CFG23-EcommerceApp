@@ -40,11 +40,13 @@
 .product__price {
  font-weight: 900;
  font-size:2vmax;
- padding-top: 80px;
+ position: absolute;
+  Bottom: 80px;
 }
 
 .item__description button {
-  margin-top: 40px;
+  position: absolute;
+  Bottom: 0px;
   padding: 20px;
   width: 260px;
   background-color: black;
