@@ -51,7 +51,6 @@ function ProductDetails(props) {
                 >
                   +
                 </Button>
-                
                 <Button
                   sm="2"
                   className="btn-sm mt-2"
@@ -59,16 +58,15 @@ function ProductDetails(props) {
                 >
                   -
                 </Button>
-              </Col>
-            </Form>
             <Button
               variant="danger"
               onClick={handleDeleteFromCart}
-              className="mt-5"
+              className="btn-sm mt-2"
             >
               REMOVE
             </Button>
-
+            </Col>
+            </Form>
 
           </>
         ) : (
